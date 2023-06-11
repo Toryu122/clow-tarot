@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clow Card</title>
+
+  <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../../public/css/style.css" />
+  <link rel="stylesheet" href="../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- <div class="container" id="card-deck">
+    <div class="row align-items-center">
+      <div class="col-1 offset-md-2 text-center" id="card-section-1">
+        <img src="../../public/images/ClowCard/clow_card_rear_face.png" alt="Card 1" width="82" height="189" class="img-fluid">
+      </div>
+      <div class="col-1" id="card-section-2">
+        <img src="../../public/images/ClowCard/clow_card_rear_face.png" alt="Card 2" width="82" height="189" class="img-fluid d-block">
+        <img src="../../public/images/ClowCard/clow_card_rear_face.png" alt="Card 3" width="82" height="189" class="img-fluid d-block mt-2">
+      </div>
+      <div class="col-1" id="card-section-3">
+        <img src="../../public/images/ClowCard/clow_card_rear_face.png" alt="Card 4" width="82" height="189" class="img-fluid d-block">
+        <img src="../../public/images/ClowCard/clow_card_rear_face.png" alt="Card 5" width="82" height="189" class="img-fluid d-block mt-2">
+        <img src="../../public/images/ClowCard/clow_card_rear_face.png" alt="Card 6" width="82" height="189" class="img-fluid d-block mt-2">
+      </div>
+      <div class="col-1" id="card-section-4">
+        <img src="../../public/images/ClowCard/clow_card_rear_face.png" alt="Card 7" width="82" height="189" class="img-fluid d-block">
+        <img src="../../public/images/ClowCard/clow_card_rear_face.png" alt="Card 8" width="82" height="189" class="img-fluid d-block mt-2">
+      </div>
+      <div class="col-1" id="card-section-5">
+        <img src="../../public/images/ClowCard/clow_card_rear_face.png" alt="Card 9" width="82" height="189" class="img-fluid d-block">
+      </div>
+      <div class="col-2 d-flex align-items-end justify-content-center" id="card-section-6">
+        <img src="../../public/images/ClowCard/clow_card_rear_face.png" alt="Card 10" width="82" height="189" class="img-fluid d-block">
+      </div>
+    </div>
+  </div> -->
+
+  <!-- For testing UI -->
+  <!-- <div class="container">
+    <div class="card" onclick="revealImage(this)">
+      <a data-bs-toggle="modal" data-bs-target="#modal1">
+        <img onclick="reveal(this)" data-image="../../public/images/ClowCard/clow_card_rear_face.png"
+          src="../../public/images/ClowCard/convert/ClowBubbles.jpg" width="82" height="189" alt="Image"
+          class="card-image">
+      </a>
+    </div>
+  </div> -->
+
+  <div class="container pt-4">
+    <div class="col-6">
+      <a data-bs-toggle="modal" data-bs-target="#modalInstruction" class="btn btn-outline-info">
+        <i class="fa-solid fa-circle-info"></i> Hướng Dẫn Xem Bài</a>
+    </div>
+    <div class="modal fade" id="modalInstruction" tabindex="-1" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="container">
+              <div class="container-fluid">
+                <div class="text-center">
+                  <h3>Thứ tự xem bài</h3>
+                </div>
+                <div class="text-center">
+                  <img src="../../public/images/instruction.PNG" alt="" srcset="">
+                </div>
+
+                <div class="text-center">
+                  <p class="h3">
+                    Vị trí các lá bài khi bói và ý nghĩa tương ứng
+                  </p>
+                </div>
+
+                <p class="fw-bold">Vị trí 1: Vấn đề đang xảy ra với bạn.</p>
+                <p class="fw-bold">Vị trí 2: Nguyên nhân của vấn đề.</p>
+                <p class="fw-bold">Vị trí 3: Vấn đề trong quá khứ có ảnh hưởng tới vấn đề đang xảy ra.</p>
+                <p class="fw-bold">Vị trí 4: Những khía cạnh chung quanh vấn đề bạn đặt ra.</p>
+                <p class="fw-bold">Vị trí 5: Giải pháp cho vấn đề đang xảy ra này.</p>
+                <p class="fw-bold">Vị trí 6: Chìa khóa đưa bạn tới giải pháp đó.</p>
+                <p class="fw-bold">Vị trí 7: Những khó khăn sẽ xảy ra khi bạn đang giải quyết vấn đề trên.</p>
+                <p class="fw-bold">Vị trí 8: Những gì sẽ xảy ra tiếp theo với vấn đề này.</p>
+                <p class="fw-bold">Vị trí 9: Kết quả cuối cùng.</p>
+                <p class="fw-bold">Vị trí 10: Cách để mọi người đều có thể nhìn thấy vấn đề.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <div id="card-container" class="container pt-2"></div>
+  <script src="clowRender.js"></script>
+
+  <script src="../../../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const closeWindow = () => {
+      const window = remote.getCurrentWindow();
+      window.close();
+    };
+  </script>
+</body>
+
+</html>
