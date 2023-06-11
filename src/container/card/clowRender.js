@@ -1,8 +1,8 @@
 const path = require("path");
 const fs = require("fs");
 
-let width = 92;
-let height = 199;
+let width = 102;
+let height = 209;
 
 // Read the image folder
 const readImageFolder = (imageFiles, sourceFolder) => {
@@ -56,7 +56,7 @@ const render = (randomCards) => {
   img1 = document.createElement("img");
   img1.setAttribute("data-image", "../../public/images/ClowCard/convert/" + card1);
   img1.src = "../../public/images/ClowCard/clow_card_rear_face.png";
-  img1.className = "img-fluid mx-auto d-block clow-card";
+  img1.className = "mx-auto d-block clow-card";
   img1.width = width;
   img1.height = height;
   img1.id = card1;
@@ -66,7 +66,7 @@ const render = (randomCards) => {
   img2 = document.createElement("img");
   img2.setAttribute("data-image", "../../public/images/ClowCard/convert/" + card2);
   img2.src = "../../public/images/ClowCard/clow_card_rear_face.png";
-  img2.className = "img-fluid mx-auto d-block clow-card";
+  img2.className = "mx-auto d-block clow-card";
   img2.width = width;
   img2.height = height;
   img2.id = card2;
@@ -75,7 +75,7 @@ const render = (randomCards) => {
   img3 = document.createElement("img");
   img3.setAttribute("data-image", "../../public/images/ClowCard/convert/" + card3);
   img3.src = "../../public/images/ClowCard/clow_card_rear_face.png";
-  img3.className = "img-fluid mx-auto d-block clow-card mt-2";
+  img3.className = "mx-auto d-block clow-card mt-2";
   img3.width = width;
   img3.height = height;
   img3.id = card3;
@@ -84,7 +84,7 @@ const render = (randomCards) => {
   img4 = document.createElement("img");
   img4.setAttribute("data-image", "../../public/images/ClowCard/convert/" + card4);
   img4.src = "../../public/images/ClowCard/clow_card_rear_face.png";
-  img4.className = "img-fluid mx-auto d-block clow-card";
+  img4.className = "mx-auto d-block clow-card";
   img4.width = width;
   img4.height = height;
   img4.id = card4;
@@ -93,7 +93,7 @@ const render = (randomCards) => {
   img5 = document.createElement("img");
   img5.setAttribute("data-image", "../../public/images/ClowCard/convert/" + card5);
   img5.src = "../../public/images/ClowCard/clow_card_rear_face.png";
-  img5.className = "img-fluid mx-auto d-block clow-card mt-2";
+  img5.className = "mx-auto d-block clow-card mt-2";
   img5.width = width;
   img5.height = height;
   img5.id = card5;
@@ -102,7 +102,7 @@ const render = (randomCards) => {
   img6 = document.createElement("img");
   img6.setAttribute("data-image", "../../public/images/ClowCard/convert/" + card6);
   img6.src = "../../public/images/ClowCard/clow_card_rear_face.png";
-  img6.className = "img-fluid mx-auto d-block clow-card mt-2";
+  img6.className = "mx-auto d-block clow-card mt-2";
   img6.width = width;
   img6.height = height;
   img6.id = card6;
@@ -111,7 +111,7 @@ const render = (randomCards) => {
   img7 = document.createElement("img");
   img7.setAttribute("data-image", "../../public/images/ClowCard/convert/" + card7);
   img7.src = "../../public/images/ClowCard/clow_card_rear_face.png";
-  img7.className = "img-fluid mx-auto d-block clow-card";
+  img7.className = "mx-auto d-block clow-card";
   img7.width = width;
   img7.height = height;
   img7.id = card7;
@@ -120,7 +120,7 @@ const render = (randomCards) => {
   img8 = document.createElement("img");
   img8.setAttribute("data-image", "../../public/images/ClowCard/convert/" + card8);
   img8.src = "../../public/images/ClowCard/clow_card_rear_face.png";
-  img8.className = "img-fluid mx-auto d-block clow-card mt-2";
+  img8.className = "mx-auto d-block clow-card mt-2";
   img8.width = width;
   img8.height = height;
   img8.id = card8;
@@ -129,7 +129,7 @@ const render = (randomCards) => {
   img9 = document.createElement("img");
   img9.setAttribute("data-image", "../../public/images/ClowCard/convert/" + card9);
   img9.src = "../../public/images/ClowCard/clow_card_rear_face.png";
-  img9.className = "img-fluid mx-auto d-block clow-card";
+  img9.className = "mx-auto d-block clow-card";
   img9.width = width;
   img9.height = height;
   img9.id = card9;
@@ -138,7 +138,7 @@ const render = (randomCards) => {
   img10 = document.createElement("img");
   img10.setAttribute("data-image", "../../public/images/ClowCard/convert/" + card10);
   img10.src = "../../public/images/ClowCard/clow_card_rear_face.png";
-  img10.className = "img-fluid mx-auto d-block clow-card";
+  img10.className = "mx-auto d-block clow-card";
   img10.width = width;
   img10.height = height;
   img10.id = card10;
@@ -228,7 +228,7 @@ const render = (randomCards) => {
   cardSection5.appendChild(a9);
   
   cardSection6 = document.createElement("div");
-  cardSection6.className = "col-2 d-flex align-items-end justify-content-center";
+  cardSection6.className = "col-2 d-flex justify-content-end";
   cardSection6.id = "card-section-6";
   cardSection6.appendChild(a10);
   
@@ -254,13 +254,25 @@ const render = (randomCards) => {
 
     let cardImg = document.createElement("img");
     let cardDetail = document.createElement("p")
+    let cardTitle = document.createElement("div");
+    let cardKeyword = document.createElement("div");
+    let cardMessage = document.createElement("div");
+    let cardAlert = document.createElement("div");
+
+    let detailTitle = document.createElement("p");
+    let detailKeyword = document.createElement("p");
+    let detailKeyword2 = document.createElement("p");
+    let detailMessage = document.createElement("p");
+    let detailMessage2 = document.createElement("p");
+    let detailAlert = document.createElement("p");
+    let detailAlert2 = document.createElement("p");
 
     modalDialog.className = "modal fade";
     modalDialog.id = `modal${i}`;
     modalDialog.tabIndex = -1;
     modalDialog.role = "dialog"
 
-    modalDocument.className = "modal-dialog modal-lg";
+    modalDocument.className = "modal-dialog modal-xl";
     modalDocument.role = "document";
 
     modalContent.className = "modal-content";
@@ -276,8 +288,47 @@ const render = (randomCards) => {
     cardImg.className = "img-fluid";
     cardImg.width = 239;
     cardImg.height = 528;
+    cardImg.id = "card-image";
 
-    cardDetail.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae recusandae atque expedita accusantium nesciunt error facilis sunt odio ab, nemo quibusdam quod velit nulla voluptate quas hic. Vitae, placeat hic!";
+    cardDetail.id = "card-detail";
+    cardDetail.appendChild(cardTitle);
+    cardDetail.appendChild(cardKeyword);
+    cardDetail.appendChild(cardMessage);
+    cardDetail.appendChild(cardAlert);
+
+    cardTitle.id = "title";
+    cardTitle.className = "text-center";
+    cardTitle.appendChild(detailTitle);
+
+    cardKeyword.id = "keyword";
+    cardKeyword.appendChild(detailKeyword);
+    cardKeyword.appendChild(detailKeyword2);
+
+    cardMessage.id = "message";
+    cardMessage.appendChild(detailMessage);
+    cardMessage.appendChild(detailMessage2);
+
+    cardAlert.id = "alert";
+    cardAlert.appendChild(detailAlert);
+    cardAlert.appendChild(detailAlert2);
+
+    detailTitle.className = "h4 fw-bold";
+    detailTitle.innerHTML = "The Arrow";
+
+    detailKeyword.className = "h5 fw-bold";
+    detailKeyword.innerHTML = "Từ Khóa: ";
+    detailKeyword2.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, labore ullam error, tempora laborum deleniti quaerat et harum numquam officia obcaecati optio sit similique, quam temporibus debitis sequi delectus quidem.";
+
+    detailMessage.className = "h5 fw-bold";
+    detailMessage.innerHTML = "Thông Điệp: ";
+    detailMessage2.innerHTML = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae harum maiores similique velit, eligendi distinctio incidunt illo aliquid. Aliquid sequi libero assumenda quos, ut quisquam pariatur molestias optio quae obcaecati! Voluptatum, eveniet? Officia omnis, voluptates illum deserunt aliquam doloremque quod, laudantium fugiat minus sequi molestiae laborum odio ratione quasi excepturi aut? Quod ab dignissimos temporibus, corporis non adipisci facilis atque.";
+
+    detailAlert.className = "h5 fw-bold";
+    detailAlert.innerHTML = "Cảnh Báo: ";
+    detailAlert2.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, fugiat est qui hic voluptatum ut et deleniti totam laborum. Saepe porro, at rem asperiores quibusdam deleniti adipisci non voluptates eligendi. Officia expedita laudantium odio nulla iste blanditiis itaque doloribus recusandae sequi, omnis, repudiandae molestias, quos voluptate dolorum odit reiciendis consectetur minus eius repellat architecto! Eligendi non voluptatibus beatae officiis totam? Explicabo illo autem omnis nostrum magnam repellendus, nihil amet adipisci velit eos, pariatur ducimus eveniet consectetur aliquid accusantium dolores esse culpa ullam earum saepe perferendis! Labore officia dolores ducimus mollitia?";
+    
+
+    
 
     modalDialog.appendChild(modalDocument);
     modalDocument.appendChild(modalContent);
